@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> LifeCTN </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+      <h1> LifeCTN</h1>
+      <h2> What are you looking for?</h2>
+      <button><a href="/calendar">Calendar</a></button>
+      <button><a href="/tasks">Tasks</a></button>
+      <button><a href="/notes">Notes</a></button>
+
+      <div class="event-list">
+        <ul>
+          {% for event in events %}
+            <li>{{ event.event_name }} - {{ event.event_date }} - {{event.event_type}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="row">
+      <div class="col s12">All Sections:</div>
+      <div class="col s4">-Calendar Events-</div>
+      <div class="col s4">-Tasks-</div>
+      <div class="col s4">-Notes-</div>
+      </div>
+
+
+    </body>
+</html>

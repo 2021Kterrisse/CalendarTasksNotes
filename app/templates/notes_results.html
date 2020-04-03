@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Notes</title>
+    </head>
+    <body>
+      <p>These are your notes: </p>
+<div class="event-list">
+      <ul>
+        {% for event in notes %}
+          <li>{{ event.notes_text }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+</body>
+</html>

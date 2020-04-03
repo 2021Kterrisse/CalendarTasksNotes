@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Calendar Events</title>
+    </head>
+    <body>
+      <p>These are your calendar events:</p>
+<div class="event-list">
+      <ul>
+        {% for event in calendar %}
+          <li>{{ event.calendar }} - {{ event.calendar_date }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+</body>
+</html>

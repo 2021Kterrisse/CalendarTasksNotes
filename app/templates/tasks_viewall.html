@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Tasks</title>
+    </head>
+    <body>
+      <p>These are your tasks:</p>
+<div class="event-list">
+      <ul>
+        {% for event in tasks %}
+          <li>{{ event.tasks_date }} - {{ event.tasks_text }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+</body>
+</html>

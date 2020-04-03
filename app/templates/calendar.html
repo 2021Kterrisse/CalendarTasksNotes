@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Calendar Events </title>
+        <link rel="stylesheet" type="text/css" href="/../static/calendar.css">
+    </head>
+    <body>
+      <button><a href="/home">HOME</a></button>
+      <h1> Calendar Events </h1>
+      <div class="event-list">
+        <ul>
+          {% for event in events %}
+            <li>{{ event.event_name }} - {{ event.event_date }} - {{event.event_type}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <form method = "post" action = "/calendar_viewall">
+        <h2> Create a Calendar Event </h2>
+        <p>What's your event?</p>
+        <textarea name="calendar_text" cols="50" rows="10"></textarea>
+        <br>
+        <p>What's the date?</p>
+        <input type = "text" name = "event_date" />
+
+        <br>
+        <br>
+        <input type = "submit" value = "submit"/>
+        <div class="month">
+        </form>
+        <button type="button"><a href="/calendar_viewall">View All</a></button>
